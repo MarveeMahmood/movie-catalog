@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fb;
+}
+/* header */
+.header {
+  background-color: #1e1b4b;
+  color: white;
+  padding: 15px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  background:  linear-gradient(135deg, #f472b6, #facc15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #a78bfa;
+}
+
+/* hamburger is hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+/* hero */
+.hero {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 200% 200%;
+  background-position: left;
+  transition: background-position 0.8s ease;
+  color: white;
+  text-align: center;
+  padding: 60px 15px;
+}
+.hero:hover {
+  background-position: right;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+
+
+/* catalog */
+.movies {
+  padding: 30px 15px;
+}
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px ;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  padding: 15px;
+}
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #6a11cb;
+}
+.card button + button {
+  background-color: #ef4444;
+  margin-left: 5px;
+}
+
+/* this class is added with javascript */
+.card.favorites {
+  background-color: gold;
+}
+
+/* footer */
+.footer {
+  background-color: #1e1b4b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* this class is added with javascript */
+  .nav.active {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+/*-----------------*/
+
+/* form box */
+#movieForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+/* inputs and dropdowns */
+#movieForm input,
+#movieForm select,
+#filter {
+  padding: 8px 10px;
+  border: 1px solid #c7c9e0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+/* purple border when click into a field */
+#movieForm input:focus,
+#movieForm select:focus,
+#filter:focus {
+  outline: none;
+  border-color: #6a11cb;
+   box-shadow: 0 0 0 2px #6a11cb;
+}
+/* the "Add movie" button */
+#movieForm button {
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+#movieForm button:hover {
+  background-color: #2575fc;
+}

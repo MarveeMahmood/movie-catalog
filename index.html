@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Movie Catalog</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+   <!-- header with menu -->
+
+    <header class="header">
+      <div class="container">
+          <div class="logo">MovieBox</div>
+          <button class="hamburger">☰</button>
+
+        <nav class="nav">
+          <ul class="menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+   <!-- hero -->
+      <section class="hero" id="hero">
+        <h1>My Movie Catalog</h1>
+        <p>Here are some Movies I like.</p>
+      </section>
+
+      <!-- catalog, cards come from script.js -->
+
+      <section class="movies" id="movies">
+          <h2>Movies</h2>
+          <!-- form for add a movie-->
+          
+          <form id="movieForm">
+
+            <input type="text" id="titleInput" placeholder="Title" required />
+
+              <select id="categoryInput">
+                <option value="Sci-fi">Sci-fi</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+              </select>
+
+            <input type="number" id="yearInput" placeholder="Year" required />
+
+            <button type="submit">Add movie</button>
+          </form>
+
+
+          <!--a drop down menu-->
+          <label for="filter">Filter:</label>
+
+          <select id="filter">
+            <option value="all">All</option>
+            <option value="Sci-fi">Sci-fi</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+          </select>
+
+
+
+
+        <div class="catalog" id="catalog"></div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <p>Made by me, 2026</p>
+    </footer>
+  </body>
+</html>
